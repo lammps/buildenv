@@ -57,3 +57,7 @@ RUN source /usr/share/lmod/lmod/init/profile && \
 ENV OMPI_MCA_btl="tcp,self"
 # do not warn about unused components as this messes up testing
 ENV OMPI_MCA_btl_base_warn_component_unused="0"
+
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/bin/bash"]
