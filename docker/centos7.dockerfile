@@ -9,7 +9,7 @@ RUN yum -y install epel-release && \
         hdf5-devel python36-virtualenv python36-pip python-pip \
         netcdf-devel netcdf-cxx-devel netcdf-mpich-devel netcdf-openmpi-devel \
         python-virtualenv fftw-devel voro++-devel eigen3-devel gsl-devel openblas-devel enchant \
-        blas-devel lapack-devel libyaml-devel openkim-models kim-api-devel && \
+        blas-devel lapack-devel libyaml-devel openkim-models kim-api-devel zstd && \
     yum clean all
 
 ENV PLUMED_VERSION=2.6.0

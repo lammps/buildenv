@@ -67,6 +67,7 @@ RUN apt-get update && \
         voro++-dev \
         wget \
         xxd \
+        zstd \
         valgrind \
         gdb \
         libkim-api-dev \
