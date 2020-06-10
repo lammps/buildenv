@@ -16,6 +16,7 @@ jobs:
         config:
           - {tag: 'ubuntu18.04', dockerfile: 'docker/ubuntu18.04.dockerfile'}
           - {tag: 'centos7', dockerfile: 'docker/centos7.dockerfile'}
+          - {tag: 'fedora32_mingw', dockerfile: 'docker/fedora32_mingw.dockerfile'}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
