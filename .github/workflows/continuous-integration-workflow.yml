@@ -29,4 +29,5 @@ jobs:
           tags: ${{ matrix.config.tag }}
           dockerfile: ${{ matrix.config.dockerfile }}
           build_args: ${{ matrix.config.build_args }}
+          path: docker/
           push: ${{ github.event_name == 'push' ||  github.event_name == 'schedule' }}
