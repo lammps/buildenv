@@ -88,7 +88,7 @@ RUN mkdir plumed && \
     cd ../../ && \
     rm -rvf plumed
 
-ENV LC_ALL=C.UTF-8
+ENV LC_ALL=C
 ENV PATH=/usr/lib/ccache:$PATH
 # restrict OpenMPI to shared memory comm by default
 ENV    OMPI_MCA_btl="tcp,self"
