@@ -53,6 +53,7 @@ RUN apt-get update && \
         python3-pkg-resources \
         python3-setuptools \
         python3-virtualenv \
+        python3-yaml \
         rsync \
         ssh \
         texlive \

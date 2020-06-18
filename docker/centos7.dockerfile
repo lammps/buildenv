@@ -6,7 +6,7 @@ RUN yum -y install epel-release && \
         ccache gcc-c++ gcc-gfortran clang gdb valgrind-openmpi \
         make cmake cmake3 ninja-build patch which file git Lmod \
         libpng-devel libjpeg-devel openmpi-devel mpich-devel python-devel python36-devel \
-        hdf5-devel python36-virtualenv python36-pip python-pip \
+        hdf5-devel python36-virtualenv python36-pip python36-PyYAML python-pip \
         netcdf-devel netcdf-cxx-devel netcdf-mpich-devel netcdf-openmpi-devel \
         python-virtualenv fftw-devel voro++-devel eigen3-devel gsl-devel openblas-devel enchant \
         blas-devel lapack-devel libyaml-devel openkim-models kim-api-devel zstd && \
