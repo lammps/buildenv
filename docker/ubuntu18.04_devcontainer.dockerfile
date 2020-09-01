@@ -40,6 +40,7 @@ RUN apt-get update && \
         libproj-dev \
         libvtk6-dev \
         libyaml-dev \
+        libzstd-dev \
         make \
         mpi-default-bin \
         mpi-default-dev \
