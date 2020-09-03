@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-18.04
+FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -91,6 +91,9 @@ RUN mkdir plumed && \
     cd ../../ && \
     rm -rvf plumed
 
-ENV LC_ALL=C.UTF-8
+ENV LC_ALL=C
 ENV PATH=/usr/lib/ccache:$PATH
-ENV DEBIAN_FRONTEND=dialog
+# restrict OpenMPI to shared memory comm by default
+ENV    OMPI_MCA_btl="tcp,self"
+# do not warn about unused components as this messes up testing
+ENV OMPI_MCA_btl_base_warn_component_unused="0"

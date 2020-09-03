@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-18.04
+FROM mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-20.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 

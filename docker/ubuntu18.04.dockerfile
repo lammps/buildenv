@@ -16,9 +16,11 @@ RUN apt-get update && \
         cmake-curses-gui \
         curl \
         doxygen \
+        dvipng \
         enchant \
         g++ \
         gcc \
+        gdb \
         gfortran \
         git \
         hdf5-tools \
@@ -31,15 +33,17 @@ RUN apt-get update && \
         libhdf5-serial-dev \
         libhwloc-dev \
         libjpeg-dev \
+        libkim-api-dev \
         liblapack-dev \
         libnetcdf-dev \
+        libnuma-dev \
         libomp-dev \
         libopenblas-dev \
-        libnuma-dev \
         libpng-dev \
         libproj-dev \
         libvtk6-dev \
         libyaml-dev \
+        libzstd-dev \
         make \
         mpi-default-bin \
         mpi-default-dev \
@@ -57,26 +61,23 @@ RUN apt-get update && \
         rsync \
         ssh \
         texlive \
-        texlive-latex-recommended \
         texlive-formats-extra \
+        texlive-latex-recommended \
         texlive-pictures \
         texlive-publishers \
         texlive-science \
-        dvipng \
+        valgrind \
         vim-nox \
         virtualenv \
         voro++-dev \
         wget \
         xxd \
         zstd \
-        valgrind \
-        gdb \
-        libkim-api-dev \
         openkim-models && \
     apt-get purge --autoremove -y && \
     rm -rf /var/lib/apt/lists/*
 
-ENV PLUMED_VERSION=2.6.0
+ENV PLUMED_VERSION=2.6.1
 
 # manually install Plumed
 RUN mkdir plumed && \

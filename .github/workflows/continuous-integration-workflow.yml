@@ -16,6 +16,8 @@ jobs:
         config:
           - {tag: 'ubuntu18.04', dockerfile: 'docker/ubuntu18.04.dockerfile'}
           - {tag: 'ubuntu18.04_devcontainer', dockerfile: 'docker/ubuntu18.04_devcontainer.dockerfile'}
+          - {tag: 'ubuntu20.04', dockerfile: 'docker/ubuntu20.04.dockerfile'}
+          - {tag: 'ubuntu20.04_devcontainer', dockerfile: 'docker/ubuntu20.04_devcontainer.dockerfile'}
           - {tag: 'centos7', dockerfile: 'docker/centos7.dockerfile'}
           - {tag: 'fedora32_mingw', dockerfile: 'docker/fedora32_mingw.dockerfile'}
     runs-on: ubuntu-latest
