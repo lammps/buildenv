@@ -34,7 +34,7 @@ RUN dnf -y update && \
            texlive-latex-bin texlive-lualatex-math texlive-fncychap texlive-tabulary \
            texlive-framed texlive-wrapfig texlive-upquote texlive-capt-of \
            texlive-needspace texlive-titlesec texlive-anysize texlive-dvipng \
-           blas-devel lapack-devel libyaml-devel openkim-models kim-api-devel zstd zstd-devel && \
+           blas-devel lapack-devel libyaml-devel openkim-models kim-api-devel zstd libzstd-devel && \
     dnf clean all
 
 ENV PLUMED_VERSION=2.6.1
