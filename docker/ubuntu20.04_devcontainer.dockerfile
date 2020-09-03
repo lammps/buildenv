@@ -48,10 +48,9 @@ RUN apt-get update && \
         mpi-default-bin \
         mpi-default-dev \
         ninja-build \
-        python-dev \
-        python-pip \
-        python-pygments \
-        python-virtualenv \
+        python3-pip \
+        python3-pygments \
+        python3-virtualenv \
         python3-dev \
         python3-pip \
         python3-pkg-resources \
