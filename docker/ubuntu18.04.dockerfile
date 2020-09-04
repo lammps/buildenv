@@ -34,6 +34,7 @@ RUN apt-get update && \
         libhwloc-dev \
         libjpeg-dev \
         libkim-api-dev \
+        libkim-api-doc \
         liblapack-dev \
         libnetcdf-dev \
         libnuma-dev \
