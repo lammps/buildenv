@@ -17,6 +17,8 @@ RUN apt-get update && \
         curl \
         doxygen \
         dvipng \
+        latexmk \
+        xindy \
         enchant \
         g++ \
         gcc \
