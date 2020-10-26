@@ -1,16 +1,20 @@
-FROM centos:7
+FROM centos:8
 
-RUN yum -y install epel-release && \
-    yum -y update && \
-    yum -y install \
-                   Lmod \
+RUN dnf -y install epel-release dnf-utils && \
+    dnf config-manager --set-enabled PowerTools && \
+    dnf -y update && \
+    dnf -y install \
                    blas-devel \
                    ccache \
                    clang \
-                   cmake3 \
+                   cmake \
+                   diffutils \
+                   doxygen \
+                   doxygen-latex \
                    eigen3-devel \
                    enchant \
                    fftw-devel \
+                   file \
                    file \
                    gcc-c++ \
                    gcc-gfortran \
@@ -20,14 +24,16 @@ RUN yum -y install epel-release && \
                    hdf5-devel \
                    kim-api-devel \
                    lapack-devel \
+                   latexmk \
+                   libasan \
                    libjpeg-devel \
-                   libjpeg-devel \
+                   libomp-devel \
                    libpng-devel \
-                   libpng-devel \
+                   libtsan \
+                   libubsan \
                    libyaml-devel \
                    libzstd-devel \
                    make \
-                   mpich-devel \
                    mpich-devel \
                    netcdf-cxx-devel \
                    netcdf-devel \
@@ -37,24 +43,34 @@ RUN yum -y install epel-release && \
                    openblas-devel \
                    openkim-models \
                    openmpi-devel \
-                   openmpi-devel \
                    patch \
-                   python-devel \
-                   python-devel \
-                   python-pip \
-                   python-virtualenv \
-                   python3-PyYAML \
-                   python3-devel \
-                   python3-devel \
-                   python3-pip \
-                   python3-venv \
+                   platform-python-devel \
+                   python3-virtualenv \
                    readline-devel \
-                   valgrind-openmpi \
+                   texlive-anysize \
+                   texlive-capt-of \
+                   texlive-collection-latex \
+                   texlive-collection-latexrecommended \
+                   texlive-dvipng \
+                   texlive-fncychap \
+                   texlive-framed \
+                   texlive-latex \
+                   texlive-latex-bin \
+                   texlive-latex-fonts \
+                   texlive-latexconfig \
+                   texlive-lualatex-math \
+                   texlive-needspace \
+                   texlive-pslatex \
+                   texlive-tabulary \
+                   texlive-titlesec \
+                   texlive-upquote \
+                   texlive-wrapfig \
+                   valgrind \
                    vim-enhanced \
                    voro++-devel \
                    which \
                    zstd && \
-    yum clean all
+        dnf clean all
 
 ENV PLUMED_VERSION=2.6.1
 

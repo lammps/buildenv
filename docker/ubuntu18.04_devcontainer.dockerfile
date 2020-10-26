@@ -16,13 +16,9 @@ RUN apt-get update && \
         cmake-curses-gui \
         curl \
         doxygen \
-        dvipng \
-        latexmk \
-        xindy \
         enchant \
         g++ \
         gcc \
-        gdb \
         gfortran \
         git \
         hdf5-tools \
@@ -35,14 +31,14 @@ RUN apt-get update && \
         libhdf5-serial-dev \
         libhwloc-dev \
         libjpeg-dev \
-        libkim-api-dev \
         liblapack-dev \
         libnetcdf-dev \
-        libnuma-dev \
         libomp-dev \
         libopenblas-dev \
+        libnuma-dev \
         libpng-dev \
         libproj-dev \
+        libreadline-dev \
         libvtk6-dev \
         libyaml-dev \
         libzstd-dev \
@@ -59,22 +55,26 @@ RUN apt-get update && \
         python3-pkg-resources \
         python3-setuptools \
         python3-virtualenv \
-        python3-yaml \
         rsync \
         ssh \
         texlive \
-        texlive-formats-extra \
         texlive-latex-recommended \
+        texlive-formats-extra \
         texlive-pictures \
         texlive-publishers \
         texlive-science \
-        valgrind \
+        dvipng \
+        latexmk \
+        xindy \
         vim-nox \
         virtualenv \
         voro++-dev \
         wget \
         xxd \
+        valgrind \
+        gdb \
         zstd \
+        libkim-api-dev \
         openkim-models && \
     apt-get purge --autoremove -y && \
     rm -rf /var/lib/apt/lists/*
