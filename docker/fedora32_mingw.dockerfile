@@ -32,7 +32,7 @@ RUN dnf -y update && \
                    libtsan \
                    libubsan \
                    libyaml-devel \
-                   libzstd-devel
+                   libzstd-devel \
                    make \
                    mingw-binutils-generic \
                    mingw-filesystem-base \
