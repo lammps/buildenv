@@ -96,3 +96,6 @@ RUN mkdir plumed && \
 ENV LC_ALL=C.UTF-8
 ENV PATH=/usr/lib/ccache:$PATH
 ENV DEBIAN_FRONTEND=dialog
+
+# create missing readline pkgconfig file
+COPY readline_7.0_ubuntu.pc /usr/lib/x86_64-linux-gnu/pkgconfig/readline.pc

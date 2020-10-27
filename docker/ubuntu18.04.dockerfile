@@ -99,3 +99,6 @@ ENV PATH=/usr/lib/ccache:$PATH
 ENV    OMPI_MCA_btl="tcp,self"
 # do not warn about unused components as this messes up testing
 ENV OMPI_MCA_btl_base_warn_component_unused="0"
+
+# create missing readline pkgconfig file
+COPY readline_7.0_ubuntu.pc /usr/lib/x86_64-linux-gnu/pkgconfig/readline.pc
