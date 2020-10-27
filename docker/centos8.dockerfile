@@ -97,7 +97,7 @@ ENV OMPI_MCA_btl="tcp,self"
 ENV OMPI_MCA_btl_base_warn_component_unused="0"
 
 # create missing readline pkgconfig file
-COPY readline.pc /usr/lib64/pkgconfig/readline.pc
+COPY readline_7.0.pc /usr/lib64/pkgconfig/readline.pc
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
