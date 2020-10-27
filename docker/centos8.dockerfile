@@ -85,7 +85,7 @@ RUN . /etc/profile && \
     ./configure --disable-doc --prefix=/usr && \
     make -j 4 && \
     make install && \
-    mv -v /usr/lib/pkgconfig/plumed* /usr/share/pkgconfig/ && \
+    mv -v /usr/lib64/pkgconfig/plumed* /usr/share/pkgconfig/ && \
     cd ../../ && \
     rm -rvf plumed
 
