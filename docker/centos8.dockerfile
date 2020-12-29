@@ -1,7 +1,7 @@
 FROM centos:8
 
 RUN dnf -y install epel-release dnf-utils && \
-    dnf config-manager --set-enabled PowerTools && \
+    dnf config-manager --set-enabled powertools && \
     dnf -y update && \
     dnf -y install \
                    blas-devel \
