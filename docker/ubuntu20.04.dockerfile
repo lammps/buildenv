@@ -17,6 +17,7 @@ RUN apt-get update && \
         curl \
         doxygen \
         enchant \
+        ffmpeg \
         g++ \
         gcc \
         gfortran \
