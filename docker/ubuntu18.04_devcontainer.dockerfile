@@ -16,6 +16,7 @@ RUN apt-get update && \
         cmake-curses-gui \
         curl \
         doxygen \
+        ffmpeg \
         enchant \
         g++ \
         gcc \
