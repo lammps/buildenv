@@ -56,7 +56,7 @@ RUN yum -y install epel-release && \
                    zstd && \
     yum clean all
 
-ENV PLUMED_VERSION=2.6.1
+ENV PLUMED_VERSION=2.7.2
 
 # manually install Plumed
 RUN . /etc/profile && \

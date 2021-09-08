@@ -38,7 +38,7 @@ RUN dnf -y update && \
            zstd libzstd-devel && \
     dnf clean all
 
-ENV PLUMED_VERSION=2.7.1
+ENV PLUMED_VERSION=2.7.2
 
 RUN source /usr/share/lmod/lmod/init/profile && \
     module purge && \
@@ -48,7 +48,6 @@ RUN source /usr/share/lmod/lmod/init/profile && \
     curl -L -o plumed.tar.gz https://github.com/plumed/plumed2/releases/download/v${PLUMED_VERSION}/plumed-src-${PLUMED_VERSION}.tgz && \
     tar -xzf plumed.tar.gz && \
     cd plumed-${PLUMED_VERSION} && \
-    sed -i '/^#include <algorithm>/a #include <limits>' src/lepton/Operation.h && \
     ./configure --disable-doc --prefix=/usr && \
     make -j 4 && \
     make install && \

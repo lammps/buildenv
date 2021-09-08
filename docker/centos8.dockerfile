@@ -72,7 +72,7 @@ RUN dnf -y install epel-release dnf-utils && \
                    zstd && \
         dnf clean all
 
-ENV PLUMED_VERSION=2.6.1
+ENV PLUMED_VERSION=2.7.2
 
 # manually install Plumed
 RUN . /etc/profile && \
