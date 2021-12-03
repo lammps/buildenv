@@ -71,12 +71,13 @@ RUN apt-get update && \
         valgrind \
         gdb \
         zstd \
+        libyaml-cpp-dev \
         libkim-api-dev \
         openkim-models && \
     apt-get purge --autoremove -y && \
     rm -rf /var/lib/apt/lists/*
 
-ENV PLUMED_VERSION=2.7.2
+ENV PLUMED_VERSION=2.7.3
 
 # manually install Plumed
 RUN mkdir plumed && \

@@ -53,10 +53,11 @@ RUN yum -y install epel-release && \
                    vim-enhanced \
                    voro++-devel \
                    which \
-                   zstd && \
+                   zstd \
+                   yaml-cpp-devel && \
     yum clean all
 
-ENV PLUMED_VERSION=2.7.2
+ENV PLUMED_VERSION=2.7.3
 
 # manually install Plumed
 RUN . /etc/profile && \

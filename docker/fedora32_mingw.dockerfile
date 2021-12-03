@@ -114,7 +114,7 @@ RUN dnf -y update && \
                    zstd && \
     dnf clean all
 
-ENV PLUMED_VERSION=2.7.2
+ENV PLUMED_VERSION=2.7.3
 
 RUN source /usr/share/lmod/lmod/init/profile && \
     module purge && \
