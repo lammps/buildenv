@@ -19,7 +19,6 @@ jobs:
           - {tag: 'ubuntu20.04', dockerfile: 'docker/ubuntu20.04.dockerfile'}
           - {tag: 'ubuntu20.04_devcontainer', dockerfile: 'docker/ubuntu20.04_devcontainer.dockerfile'}
           - {tag: 'centos7', dockerfile: 'docker/centos7.dockerfile'}
-          - {tag: 'centos8', dockerfile: 'docker/centos8.dockerfile'}
           - {tag: 'rockylinux8', dockerfile: 'docker/rockylinux8.dockerfile'}
           - {tag: 'fedora32_mingw', dockerfile: 'docker/fedora32_mingw.dockerfile'}
           - {tag: 'fedora34_mingw', dockerfile: 'docker/fedora34_mingw.dockerfile'}
