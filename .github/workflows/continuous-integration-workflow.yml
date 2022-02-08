@@ -20,8 +20,8 @@ jobs:
           - {tag: 'ubuntu20.04_devcontainer', dockerfile: 'docker/ubuntu20.04_devcontainer.dockerfile'}
           - {tag: 'centos7', dockerfile: 'docker/centos7.dockerfile'}
           - {tag: 'rockylinux8', dockerfile: 'docker/rockylinux8.dockerfile'}
-          - {tag: 'fedora32_mingw', dockerfile: 'docker/fedora32_mingw.dockerfile'}
           - {tag: 'fedora34_mingw', dockerfile: 'docker/fedora34_mingw.dockerfile'}
+          - {tag: 'fedora35_mingw', dockerfile: 'docker/fedora35_mingw.dockerfile'}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
