@@ -6,32 +6,23 @@ on:
   pull_request:
     branches:
       - master
-  schedule:
-    - cron:  '0 1 * * FRI'
 
 jobs:
   CI:
     strategy:
       matrix:
         config:
-          - {tag: 'ubuntu18.04', dockerfile: 'docker/ubuntu18.04.dockerfile'}
-          - {tag: 'ubuntu18.04_devcontainer', dockerfile: 'docker/ubuntu18.04_devcontainer.dockerfile'}
-          - {tag: 'ubuntu20.04', dockerfile: 'docker/ubuntu20.04.dockerfile'}
-          - {tag: 'ubuntu20.04_devcontainer', dockerfile: 'docker/ubuntu20.04_devcontainer.dockerfile'}
-          - {tag: 'centos7', dockerfile: 'docker/centos7.dockerfile'}
-          - {tag: 'rockylinux8', dockerfile: 'docker/rockylinux8.dockerfile'}
-          - {tag: 'fedora34_mingw', dockerfile: 'docker/fedora34_mingw.dockerfile'}
-          - {tag: 'fedora35_mingw', dockerfile: 'docker/fedora35_mingw.dockerfile'}
+          - {tag: 'fedora38_mingw', dockerfile: 'docker/fedora38_mingw.dockerfile'}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Log in to Docker Hub
-        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker images
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v5
         with:
           tags: lammps/buildenv:${{ matrix.config.tag }}
           file: ${{ matrix.config.dockerfile }}
