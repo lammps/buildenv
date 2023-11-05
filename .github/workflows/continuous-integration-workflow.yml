@@ -12,6 +12,7 @@ jobs:
     strategy:
       matrix:
         config:
+          - {tag: 'ubuntu22.04', dockerfile: 'docker/ubuntu22.04.dockerfile'}
           - {tag: 'fedora38_mingw', dockerfile: 'docker/fedora38_mingw.dockerfile'}
     runs-on: ubuntu-latest
     steps:
