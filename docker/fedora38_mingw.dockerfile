@@ -35,6 +35,7 @@ RUN dnf -y update && \
            texlive-latex-bin texlive-lualatex-math texlive-fncychap texlive-tabulary \
            texlive-framed texlive-wrapfig texlive-upquote texlive-capt-of texlive-pict2e \
            texlive-needspace texlive-titlesec texlive-anysize texlive-dvipng texlive-xindy \
+           texlive-tex-gyre \
            blas-devel lapack-devel libyaml-devel openkim-models kim-api-devel \
            zstd libzstd-devel yaml-cpp-devel && \
         dnf clean all
