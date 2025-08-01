@@ -17,6 +17,7 @@ RUN apt-get update && \
         curl \
         doxygen \
         enchant \
+        file \
         ffmpeg \
         g++ \
         gcc \
@@ -77,7 +78,7 @@ RUN apt-get update && \
     apt-get purge --autoremove -y && \
     rm -rf /var/lib/apt/lists/*
 
-ENV PLUMED_VERSION=2.7.3
+ENV PLUMED_VERSION=2.9.3
 
 # manually install Plumed
 RUN mkdir plumed && \
