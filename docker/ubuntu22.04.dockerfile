@@ -18,6 +18,7 @@ RUN apt-get update && \
         curl \
         doxygen \
         enchant-2 \
+        file \
         g++ \
         gcc \
         gfortran \
@@ -82,7 +83,7 @@ RUN apt-get update && \
 # Plumed
 ###########################################################################
 
-ENV PLUMED_PKG_VERSION=2.8.2
+ENV PLUMED_PKG_VERSION=2.9.3
 
 RUN mkdir plumed && \
     cd plumed && \
